@@ -1,0 +1,345 @@
+@import 'nib'
+@import 'icons.css'
+vendor-prefixes ?= webkit moz official
+
+bgc(c)
+	background-color c
+	&:hover
+		background-color darken(c, 6%)
+	&:active
+		background-color lighten(c,10%) 
+		
+// bgi('url de la img', position, repeat, size) //
+bgi(i, p, r, s)
+	background-image url(i)
+	background-position p
+	background-repeat r
+	background-size s
+	
+*
+	border 0
+	margin 0
+	padding 0
+	text-decoration none
+	
+
+fb-azul = #3b5998
+gris = #566965
+gris-claro = #ecf0f1
+morado = #4e395d
+naranja = #ff7f2a
+rojo =  #dc5b3e
+salmon = #ff5555
+twt-azul = #1dcaff
+verde = #00d455
+verde-claro = #c7f464
+vino-tinto = #c44d58
+
+// A //
+
+
+
+// B //
+body 
+	font-family sans
+.big
+	display inline-block
+	width 100%
+	//width 348.999px
+	//&:nth-child(even)
+		//margin 0px 15.398px 0px 15.398px
+
+.btn
+	color white
+	min-height 111px
+	padding 20px
+	&_header
+		bgc(verde)
+		cursor pointer
+		display block
+		padding 20px
+		/i
+			height auto
+			font-size 5em
+		h1
+			font-size 1.3em
+			font-weight normal
+			letter-spacing 1em
+			text-transform uppercase
+		hr
+			background white
+			height 1px
+			margin 0 auto
+			width 70%
+			transition all .4s linear
+	p
+		font-size .6em
+		letter-spacing .5em
+		overflow hidden
+		text-overflow ellipsis
+		text-transform uppercase
+		white-space nowrap
+
+	&_caracteristicas
+		bgc(naranja)
+	&_servicios
+		bgc(gris)
+	&_clientes
+		bgc(salmon)
+	&_equipo
+		bgc(vino-tinto)
+	&_wwa // Where We Are //
+		bgc(verde-claro)
+	&_img
+		bgc(morado)
+	&_videos
+		bgc(rojo)
+	&_fb
+		bgc(fb-azul)
+	&_twt
+		bgc(twt-azul)
+	&_contacto
+		bgc(gris-claro)
+		color gris
+		
+
+.bottom
+	&-10
+		margin-bottom 10px !important
+	&-20
+		margin-bottom 20px !important
+	&-30
+		margin-bottom 30px !important
+	&-40
+		margin-bottom 40px !important
+	&-50
+		margin-bottom 50px !important
+	&-60
+		margin-bottom 60px !important
+	&-70
+		margin-bottom 70px !important
+	&-80
+		margin-bottom 80px !important
+	&-90
+		margin-bottom 90px !important
+	&-100
+		margin-bottom 100px !important
+	&-110
+		margin-bottom 110px !important
+	&-120
+		margin-bottom 120px !important
+	&-130
+		margin-bottom 130px !important
+	&-140
+		margin-bottom 140px !important
+	&-150
+		margin-bottom 150px !important
+	&-160
+		margin-bottom 160px !important
+	&-170
+		margin-bottom 170px !important
+	&-180
+		margin-bottom 180px !important
+	&-190
+		margin-bottom 190px !important
+	&-200
+		margin-bottom 200px !important
+
+
+// C //
+.container
+	margin 0 auto
+	max-width 600px
+	overflow hidden
+	position relative
+	width 100%
+	.row
+		display inline-block
+		text-align center
+		vertical-align top
+		//width 33.33%
+		&:before 
+		&:after 
+			content ""
+			display table 
+			clear both
+		li
+			display inline-block
+			list-style none
+		*
+	    	box-sizing border-box
+
+	[class*='col-']
+		float left
+		min-height 1px
+		vertical-align top
+		width 16.66% 
+	.col-1
+		width 16.66%
+
+	.col-2
+		width 33.33%
+
+	.col-3
+		width 50%
+
+	.col-4
+		width 66.664%
+
+	.col-5
+		width 83.33%
+
+	.col-6
+		width 100%
+
+
+@media all and (max-width:800px)
+	.col-1
+	 width 33.33%
+	.col-2
+	 width 50%
+	.col-3
+	 width: 83.33%
+	.col-4
+	 width: 100%
+	.col-5
+	 width: 100%
+	.col-6
+	 width: 100%
+	.row .col-5 ~ .col-1
+		width 100%
+
+
+
+
+// D //
+.description
+	background gris-claro
+	color gris
+	display none
+	opacity .9
+	padding 30px 20px 40px 20px 
+	position absolute
+	h2
+		font-size 1em
+		font-weight normal
+		letter-spacing 1em
+		line-height 50px
+		text-transform uppercase
+	p
+		font-size .9em
+		line-height 24px
+		text-align justify
+
+// E //
+
+
+// F //
+
+
+// G //
+
+
+// H //
+
+
+// I //
+
+
+// J //
+
+
+// K //
+
+
+// L //
+
+
+// M //
+
+
+// N //
+
+
+// O //
+
+
+// P //
+
+
+// Q //
+
+
+// R //
+
+
+// S //
+.small
+	background-color esmeralda
+	display inline-block
+	width 100%
+	//max-width 174.404px
+	//width 174.404px
+
+
+// T //
+.top
+	&-10
+		margin-top 10px !important
+	&-20
+		margin-top 20px !important
+	&-30
+		margin-top 30px !important
+	&-40
+		margin-top 40px !important
+	&-50
+		margin-top 50px !important
+	&-60
+		margin-top 60px !important
+	&-70
+		margin-top 70px !important
+	&-80
+		margin-top 80px !important
+	&-90
+		margin-top 90px !important
+	&-100
+		margin-top 100px !important
+	&-110
+		margin-top 110px !important
+	&-120
+		margin-top 120px !important
+	&-130
+		margin-top 130px !important
+	&-140
+		margin-top 140px !important
+	&-150
+		margin-top 150px !important
+	&-160
+		margin-top 160px !important
+	&-170
+		margin-top 170px !important
+	&-180
+		margin-top 180px !important
+	&-190
+		margin-top 190px !important
+	&-200
+		margin-top 200px !important
+
+
+// U //
+
+
+// V //
+
+
+// W //
+
+
+// X //
+
+
+// Y //
+
+
+// Z //
+
