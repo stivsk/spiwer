@@ -37,6 +37,7 @@ vino-tinto = #c44d58
 
 *::-webkit-scrollbar
 	background-color transparent
+	height 6px
 	width 6px
 	&-track
 		background-color rgba(255, 255, 255, .5)
@@ -233,7 +234,10 @@ body
 		
 	.container
 		margin-top 6em
-		max-width 95%
+		max-width 90%
+		max-height 483px
+		white-space nowrap
+		overflow visible
 					
 	.left
 	.middle
@@ -243,11 +247,11 @@ body
 		overflow auto
 		position relative
 		vertical-align top
-		width 31%
+		width 39%
 		li:nth-child(odd)
 			margin-bottom 10px
 	.right 
-		width 20%
+		width 17%
 		.col-3
 			width 100%
 		li:nth-child(even)
@@ -262,11 +266,17 @@ body
 				font-size 2em
 			p
 				display none
-		/.carousel
-			background salmon
+		.carousel
 			color white
 			display block
 			min-height 238px
+			max-height 238px
+			overflow hidden
+			img
+				height 100%
+				position relative
+				top -45px
+				width 100%
 
 // D //
 .description

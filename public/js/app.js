@@ -18,6 +18,13 @@ $(function(){
 			}
 		}
 	}
-	
+
+	$('#slider img:gt(0)').hide();
+	setInterval(function(){
+  	$('#slider img:first-child').fadeOut(0)
+     .next('img').fadeIn('slow')
+     .end().appendTo('#slider');}, 5000); 
+
+
 
 });
