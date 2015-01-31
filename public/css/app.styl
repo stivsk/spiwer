@@ -9,8 +9,9 @@ bgc(c)
 	&:active
 		background-color lighten(c,10%) 
 		
-// bgi('url de la img', position, repeat, size) //
-bgi(i, p, r, s)
+// bgi('url de la img', attachment, position, repeat, size) //
+bgi(i, a, p, r, s)
+	background-attachment a
 	background-image url(i)
 	background-position p
 	background-repeat r
@@ -22,7 +23,6 @@ bgi(i, p, r, s)
 	padding 0
 	text-decoration none
 	
-
 fb-azul = #3b5998
 gris = #566965
 gris-claro = #ecf0f1
@@ -35,12 +35,22 @@ verde = #00d455
 verde-claro = #c7f464
 vino-tinto = #c44d58
 
+*::-webkit-scrollbar
+	background-color transparent
+	width 6px
+	&-track
+		background-color rgba(255, 255, 255, .5)
+	&-thumb
+		background-color gris
+		border-radius 6px
+
 // A //
 
 
 
 // B //
 body 
+	bgi('../img/back.jpg', fixed, center, no-repeat, cover)
 	font-family sans
 .big
 	display inline-block
@@ -57,7 +67,6 @@ body
 		bgc(verde)
 		cursor pointer
 		display block
-		padding 20px
 		/i
 			height auto
 			font-size 5em
@@ -147,6 +156,8 @@ body
 
 
 // C //
+.carousel
+	display none	
 .container
 	margin 0 auto
 	max-width 460px
@@ -208,9 +219,54 @@ body
 	 width: 100%
 	.row .col-5 ~ .col-1
 		width 100%
-
-
-
+		
+@media all and (min-width:910px)
+	.btn
+		&_header 
+			hr
+				display none
+			h1
+				font-size .6em
+		&_img
+			min-height 1px 
+		
+		
+	.container
+		margin-top 6em
+		max-width 95%
+					
+	.left
+	.middle
+	.right
+		display inline-block
+		float left
+		overflow auto
+		position relative
+		vertical-align top
+		width 31%
+		li:nth-child(odd)
+			margin-bottom 10px
+	.right 
+		width 20%
+		.col-3
+			width 100%
+		li:nth-child(even)
+			margin 0px 0px 10px 0px
+	.middle
+		margin 0 10px
+		li:nth-child(2)
+			margin-bottom 12px
+			max-height 4.5em
+			width 100%
+			i
+				font-size 2em
+			p
+				display none
+		/.carousel
+			background salmon
+			color white
+			display block
+			min-height 238px
 
 // D //
 .description

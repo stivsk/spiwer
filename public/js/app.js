@@ -8,12 +8,14 @@ $(function(){
 	}
 
 	function shortHr(){
-		var w = $('hr').width();
-		if (w == 392) {
+		var w = $('hr').innerWidth();
+		if (w <= 392 ) {
 			$('hr').css('width','50%');
 			var w = $('hr').width();
-		} else if(w != 392) {
-			$('hr').css('width','70%');
+			console.log(w);
+			if (w <= 290) {
+				$('hr').css('width','70%');
+			}
 		}
 	}
 	
